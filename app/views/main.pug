@@ -1,1 +1,74 @@
-div hola mundo
+doctype html
+<!--[if IE 10]><html class="ie"> <![endif]-->
+<!--[if !IE 10]><!--> <html> <!--<![endif]-->
+  head
+    meta(charset='utf-8')
+
+    //- Description
+    title La Polar | Tu Tienda Virtual - Tecnología, Deportes, Belleza, Infantil, Regalos, Electrohogar, Decohogar. Tienda Online
+    meta(name="description" content="")
+    meta(name="keywords" content="")
+
+    meta(name="author" content="La Polar | Tecnología, Deportes, Belleza, Infantil, Regalos, Electrohogar, Decohogar. Tienda Online")
+    meta(meta name="organization" content="Tienda Online - La Polar")
+    meta(meta name="locality" content="Chile | Región Metropolitana: Estación Central, Las Rejas, La Florida, La Reina, Maipú, Huechuraba, Puente Alto, El Bosque, San Miguel, San Bernardo | Zona Norte: Ovalle, La Serena, Copiapo, Antofagasta, Calama, Coquimbo, Iquique | Zona Centro: Valparaíso, Viña del Mar, San Antonio, Los Andes, Colina, Rancagua, Cúrico | Zona Sur: Talca, Linares, Chillán, Concepción, Los Ángeles, Valdivia, Osorno, Puerto Montt, Punta Arenas, Coronel")
+
+    //- Mobile Devices Viewport Resset
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+
+    //- Open Styles - SCSS
+    link(rel='stylesheet', href='/css/app.css')
+    link(rel='stylesheet' href='/fonts/icomoon/style.css')
+
+    //- Desactivar resultado de vinculos en IE
+    meta(name="msapplication-tap-highlight" content="no")
+
+    //- Verificador de google - propietarios del sitio
+    meta(name="google-site-verification" content="oRKkQ85C9PZ-dw9kxPF9hi3o6eSLfvX2rqdtu7tBSDw")
+
+    //- Theme color Android
+    meta(name="theme-color" content="#cb1126")
+
+    //- Favicon
+    link(rel='shortcut icon' href='/images/touch/icon-favicon.png')
+
+    //- Icono Opera y Chrome en Android * Clip web
+    meta(name="mobile-web-app-capable" content="yes")
+    meta(name="application-name" content="La Polar")
+    link(rel='icon' sizes='192x192' href='/images/touch/chrome-touch-icon.png' )
+
+    //- Icono Safari en iOS * Clip web
+    meta(name="apple-mobile-web-app-capable" content="yes")
+    meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+    meta(name="apple-mobile-web-app-title" content="La Polar")
+    link(rel='apple-touch-icon' href='/images/touch/touch-icon-iphone.png' )
+    link(rel='apple-touch-icon' sizes='76x76' href='/images/touch/touch-icon-ipad.png' )
+    link(rel='apple-touch-icon' sizes='120x120' href='/images/touch/touch-icon-iphone-retina.png' )
+    link(rel='apple-touch-icon' sizes='152x152' href='/images/touch/touch-icon-ipad-retina.png' )
+
+    //- Icono Windows 8 - Microsoft * Clip web
+    //- meta(name="msapplication-TileImage" content="images/touch/ms-touch-icon.png")
+    meta(name="msapplication-TileColor" content="#FFFFFF")
+
+    //- Nombe de Sitio en azulejos
+    meta(name="application-name" content="La Polar")
+
+    //- Color de los botones del navegador
+    meta(name="msapplication-navbutton-color" content="#FFFFFF")
+
+    //- Open Graph data Share
+    meta(property="og:url" content="http://www.lapolar.cl")
+    meta(property="og:type" content="website")
+    meta(property="og:site_name" content="La Polar")
+    meta(name="og:country-name" content="CL")
+    block meta
+
+  body
+    block body
+
+    | <!--[if IE]> <script src="js/shims.js"></script> <![endif]-->
+    script.
+      // script
+    script(src='/js/vendor.js')
+    block script

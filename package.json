@@ -4,12 +4,15 @@
   "description": "Test for NodeJS Developer",
   "main": "index.js",
   "scripts": {
+    "start": "NODE_ENV=production node pm2.js",
+    "dev": "node pm2.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Rodrigo Navarro",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.1",
+    "gulp": "^3.9.1",
     "helmet": "^3.8.2",
     "moment": "^2.18.1",
     "mongodb": "^2.2.31",

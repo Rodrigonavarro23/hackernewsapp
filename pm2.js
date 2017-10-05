@@ -1,13 +1,7 @@
-const nconf = require('nconf');
 const pm2 = require('pm2');
-const ENV = nconf.get('NODE_ENV');
-
-// required config params
-//nconf.required([]);
+const ENV = process.env.NODE_ENV || 'development';
 
 const isDevelopment = ENV === 'development';
-
-console.log(isDevelopment, ENV);
 
 const apps = [
   {
@@ -25,7 +19,7 @@ const apps = [
     ],
     env: {
       DEBUG_COLORS: true,
-      NODE_ENV: nconf.get('NODE_ENV'),
+      NODE_ENV: ENV,
     },
     post_update: ['npm install'],
   },

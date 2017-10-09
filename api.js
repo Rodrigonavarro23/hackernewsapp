@@ -6,7 +6,7 @@ const hackerNewsApi = request.defaults({
     method: 'GET',
     time: true,
     'content-type': 'application/x-www-form-urlencoded',
-    encoding: 'binary'
+    encoding: null
   });
 
 module.exports = {

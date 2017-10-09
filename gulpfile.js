@@ -15,7 +15,7 @@ function addJSFolder(name, src, prependSrc = []) {
   return gulp
     .src(src)
     .pipe(gulpif(!isProduction, sourcemaps.init()))
-    .pipe(babel({ presets: ['es2015'] }))
+    .pipe(babel({ presets: ['env'] }))
     .pipe(concat(`${name}.js`))
     .pipe(stripComments())
     .pipe(gulpif(isProduction, uglify()))

@@ -4,29 +4,21 @@
   "description": "Hacker News App to read post",
   "main": "index.js",
   "scripts": {
-    "start": "node ./node_modules/.bin/pm2 start pm2.js -i max --attach && ./node_modules/.bin/pm2 logs all",
-    "dev": "node pm2.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./node_modules/.bin/gulp build && node index.js",
+    "dev": "node pm2.js"
   },
   "author": "Rodrigo Navarro",
   "license": "ISC",
   "dependencies": {
     "async": "^2.5.0",
-    "bluebird": "^3.5.1",
-    "express": "^4.16.1",
-    "helmet": "^3.8.2",
-    "moment": "^2.18.1",
-    "mongodb": "^2.2.31",
-    "nconf": "^0.8.5",
-    "node-schedule": "^1.2.5",
-    "pm2": "^2.7.1",
-    "pug": "^2.0.0-rc.4",
-    "request": "^2.83.0"
-  },
-  "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-1": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "bluebird": "^3.5.1",
+    "express": "^4.16.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-babel": "^7.0.0",
@@ -37,6 +29,16 @@
     "gulp-sourcemaps": "^2.6.1",
     "gulp-strip-comments": "^2.5.1",
     "gulp-uglify": "^3.0.0",
+    "helmet": "^3.8.2",
+    "moment": "^2.18.1",
+    "mongodb": "^2.2.31",
+    "nconf": "^0.8.5",
+    "node-schedule": "^1.2.5",
+    "pug": "^2.0.0-rc.4",
+    "request": "^2.83.0",
     "sass": "^1.0.0-beta.2"
+  },
+  "devDependencies": {
+    "pm2": "^2.7.1"
   }
 }

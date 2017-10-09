@@ -1,4 +1,4 @@
 node_modules
 node_modules/**/*
 public/js/*.js
-public/css/styles.css
+public/css/app.css

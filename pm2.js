@@ -1,13 +1,11 @@
 const pm2 = require('pm2');
-const ENV = process.env.NODE_ENV || 'development';
-
-const isDevelopment = ENV === 'development';
+const ENV ='development';
 
 const apps = [
   {
     script: 'index.js',
     name: 'resigndesign',
-    watch: isDevelopment,
+    watch: true,
     ignore_watch: [
       'app/assets',
       '.git',

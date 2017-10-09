@@ -1,3 +1,4 @@
+require('./babelhook');
 const Job = require('./lib/job');
 const express = require('express');
 const helmet = require('helmet');

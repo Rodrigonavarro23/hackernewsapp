@@ -1,3 +1,4 @@
+const Job = require('./lib/job');
 const express = require('express');
 const helmet = require('helmet');
 const views = require('./app/views');
@@ -12,4 +13,5 @@ routes(app);
 
 app.listen(port, () => {
   console.log(`App starting on port: ${port}`);
+  Job.init();
 });

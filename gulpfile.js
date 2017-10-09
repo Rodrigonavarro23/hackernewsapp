@@ -24,7 +24,10 @@ function addJSFolder(name, src, prependSrc = []) {
 }
 
 gulp.task('vendor', () =>
-  addJSFolder('vendor', './app/assets/js/vendor/*.js', [])
+  addJSFolder('vendor', [
+    './app/assets/js/vendor/jquery-3.2.1.min.js',
+    './app/assets/js/vendor/bootstrap.min.js',
+  ], [])
 );
 
 gulp.task('app', () =>
@@ -55,7 +58,7 @@ gulp.task('build', [
 ]);
 
 gulp.task('watch', () => {
-  gulp.watch(`./app/assets/scss/**/*.scss`, ['styles']);
-  gulp.watch(`./app/assets/js/**/*.js`, ['vendor', 'app']);
+  gulp.watch(`./app/assets/scss/*.scss`, ['styles']);
+  gulp.watch(`./app/assets/js/*.js`, ['vendor', 'app']);
 });
 

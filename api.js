@@ -1,8 +1,9 @@
 const Promise = require('bluebird');
 const request = require('request');
 const { retry } = require('async');
+const Config = require('./config');
 const hackerNewsApi = request.defaults({
-    url: 'https://hn.algolia.com/api/v1/search_by_date?query=nodejs',
+    url: Config.api,
     method: 'GET',
     time: true,
     encoding: null

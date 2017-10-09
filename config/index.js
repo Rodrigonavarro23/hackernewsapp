@@ -1,4 +1,5 @@
 module.exports = {
+  api: 'https://hn.algolia.com/api/v1/search_by_date?query=nodejs',
   environment: process.env.NODE_ENV,
   isDevelopment: process.env.NODE_ENV === 'development',
   port: process.env.PORT || 3000,

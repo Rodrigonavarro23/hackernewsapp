@@ -5,11 +5,16 @@ const hackerNewsApi = request.defaults({
     url: 'https://hn.algolia.com/api/v1/search_by_date?query=nodejs',
     method: 'GET',
     time: true,
-    'content-type': 'application/x-www-form-urlencoded',
     encoding: null
   });
 
+// request to api handler
 module.exports = {
+  /**
+   * @method makeRequest make an api request
+   * @param {Object} with custom options
+   * @return {Promise} with request response
+   */
   makeRequest: (options) => {
     return new Promise((resolve) => {
       retry(

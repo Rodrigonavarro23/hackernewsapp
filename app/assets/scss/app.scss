@@ -1,3 +1,4 @@
+/** header styles */
 header {
   background-color: #363636;
   color: #ffffff;
@@ -8,9 +9,12 @@ header {
     font-weight: bold;
   }
 }
+
+/** post container */
 .post {
   padding: 20px;
 
+  /** individual post */
   .row {
     padding: 20px;
     border-bottom: 1px solid #cccccc;
@@ -40,6 +44,7 @@ header {
       }
     }
 
+    /** responsive styles */
     @media(max-width: 797px) {
       padding: 6px;
 

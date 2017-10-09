@@ -10,6 +10,7 @@ app.use(express.static('public'));
 
 views(app);
 routes(app);
+app.use((req, res) => res.render('404'));
 
 app.listen(port, () => {
   console.log(`App starting on port: ${port}`);

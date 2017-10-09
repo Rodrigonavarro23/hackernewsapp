@@ -8,6 +8,7 @@ const format = {
 };
 
 module.exports = function(app) {
+  // index route
   app.get('/', (req, res) => {
     Mongo.findAll().then((result) => {
       const posts = result.map((i) => ({
@@ -18,6 +19,7 @@ module.exports = function(app) {
     });
   });
 
+  // delete post route
   app.delete('/post/:id', (req, res) => {
     const id = req.params.id;
     Mongo.delete(id)

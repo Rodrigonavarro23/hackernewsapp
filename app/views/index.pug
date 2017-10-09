@@ -4,7 +4,7 @@ doctype html
   head
     meta(charset='utf-8')
 
-    title Hacker News app
+    title Hacker News App
 
     meta(name="author" content="Rodrigo Navarro")
 
@@ -12,10 +12,9 @@ doctype html
     meta(http-equiv="X-UA-Compatible" content="IE=edge")
     meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
 
-    //- Open Styles - SCSS
+    //- Styles - SCSS
     link(rel='stylesheet' href='/css/bootstrap.min.css')
     link(rel='stylesheet', href='/css/app.css')
-    link(rel='stylesheet' href='/fonts/icomoon/style.css')
 
   body
     header
@@ -23,7 +22,9 @@ doctype html
       h4 We <3 Hacker News!
 
     .container-fluid
+      //- Posts container
       .post
+        //- iterate through posts
         each post in posts
           .row
             .col-md-9.col-sm-12
@@ -34,6 +35,6 @@ doctype html
               span.trash(data-id=post._id)
                 include svg/trash.svg
 
-    //- script
+    //- Scripts
     script(src='/js/vendor.js')
     script(src='/js/app.js')

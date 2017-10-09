@@ -1,5 +1,5 @@
-const { appController } = require('./app/controller');
-
 module.exports = function(app) {
-  app.get('/', appController);
+  app.get('/', (req, res) => {
+    res.render('index');
+  });
 }

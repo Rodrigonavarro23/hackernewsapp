@@ -5,6 +5,8 @@ const routes = require('./app/routes');
 const { port } = require('./config');
 const app = express();
 
+app.use(express.static('public'));
+
 views(app);
 routes(app);
 

@@ -9,11 +9,11 @@ $('.trash').on('click', function () {
       type: 'DELETE',
     })
     .done(() => {
-      alert('done!');
+      $('.alert.deleted').show('fast').delay(3000).hide('fast');
       $parent.remove();
     })
     .fail(() => {
-      alert('something goes wrong');
+      $('.alert.error').show('fast').delay(3000).hide('fast');
     });
   }
 });

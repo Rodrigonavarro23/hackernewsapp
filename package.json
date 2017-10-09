@@ -4,7 +4,7 @@
   "description": "Hacker News App to read post",
   "main": "index.js",
   "scripts": {
-    "start": "node ./node_modules/.bin/pm2 start pm2.js",
+    "start": "node ./node_modules/.bin/pm2 start pm2.js -i max --attach && ./node_modules/.bin/pm2 logs all",
     "dev": "node pm2.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

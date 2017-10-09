@@ -28,14 +28,15 @@ doctype html
       .post
         //- iterate through posts
         each post in posts
-          .row
-            .col-md-9.col-sm-12
-              | #{post.title}
-              span.author - #{post.author} -
-            .col-md-2.col-sm-12 #{post.created}
-            .col-md-1
-              span.trash(data-id=post._id)
-                include svg/trash.svg
+          a(href=post.url, target='_blank')
+            .row
+              .col-md-9.col-sm-12
+                | #{post.title}
+                span.author - #{post.author} -
+              .col-md-2.col-sm-12 #{post.created}
+              .col-md-1
+                span.trash(data-id=post._id)
+                  include svg/trash.svg
 
     //- Scripts
     script(src='/js/vendor.js')

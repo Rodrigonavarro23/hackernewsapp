@@ -1,7 +1,7 @@
 {
-  "name": "resign-design",
+  "name": "hacker-news-app",
   "version": "1.0.0",
-  "description": "Test for NodeJS Developer",
+  "description": "Hacker News App to read post",
   "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=production node pm2.js",

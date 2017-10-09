@@ -1,5 +1,10 @@
+const Mongo = require('../lib/mongo');
+
 module.exports = function(app) {
   app.get('/', (req, res) => {
-    res.render('index');
+    Mongo.findAll().then((result) => {
+      const post = result.map((i) => i);
+      res.render('index', { posts })
+    });
   });
 }

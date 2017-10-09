@@ -1,0 +1,58 @@
+header {
+  background-color: #363636;
+  color: #ffffff;
+  padding: 60px 40px;
+
+  h1,
+  h4 {
+    font-weight: bold;
+  }
+}
+.post {
+  padding: 20px;
+
+  .row {
+    padding: 20px;
+    border-bottom: 1px solid #cccccc;
+    cursor: pointer;
+    color: #333333;
+    font-size: 14px;
+
+    &:hover {
+      background-color: #fafafa;
+
+      .trash {
+        display: block;
+      }
+    }
+
+    .author {
+      color: #999999;
+    }
+
+    .trash {
+      display: none;
+      width: 24;
+      text-align: center;
+
+      svg {
+        width: 16px;
+      }
+    }
+
+    @media(max-width: 797px) {
+      padding: 6px;
+
+      .trash {
+        display: block;
+        padding: 10px;
+        background-color: #f0f0f0;
+        margin-top: 20px;
+
+        &:before {
+          content: 'Remove Post ';
+        }
+      }
+    }
+  }
+}

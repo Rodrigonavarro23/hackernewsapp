@@ -36,7 +36,7 @@ gulp.task('app', () =>
 
 gulp.task('styles', () =>
   gulp.src([
-    './app/assets/scss/**/*.css',
+    './app/assets/scss/*.scss',
   ])
   .pipe(gulpif(!isProduction, sourcemaps.init()))
   .pipe(
@@ -49,12 +49,13 @@ gulp.task('styles', () =>
   .pipe(gulpif(!isProduction, sourcemaps.init({ loadMaps: true })))
   .pipe(autoprefixer('last 2 version', 'safari 5', 'ios 6', 'android 4'))
   .pipe(gulpif(!isProduction, sourcemaps.write()))
-  .pipe(gulp.dest(`${sassPaths.dest}`))
+  .pipe(gulp.dest('./public/css'))
 );
 
 gulp.task('build', [
   'vendor',
   'app',
+  'styles',
 ]);
 
 gulp.task('watch', () => {

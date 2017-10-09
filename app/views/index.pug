@@ -20,15 +20,19 @@ doctype html
   body
     header
       h1 HN Feed
-      h3 We <3 Hacker News!
+      h4 We <3 Hacker News!
 
     .container-fluid
-      each post in posts
-        .row.news-list
-          .col-md-9 #{post.title} - #{post.author} -
-          .col-md-2 #{post.created}
-          .col-md-1
-            span.trash(data-id=post._id) t
+      .post
+        each post in posts
+          .row
+            .col-md-9.col-sm-12
+              | #{post.title}
+              span.author - #{post.author} -
+            .col-md-2.col-sm-12 #{post.created}
+            .col-md-1
+              span.trash(data-id=post._id)
+                include svg/trash.svg
 
     //- script
     script(src='/js/vendor.js')

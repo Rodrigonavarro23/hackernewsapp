@@ -17,4 +17,21 @@ module.exports = function(app) {
       res.render('index', { posts });
     });
   });
+
+  app.delete('/post/:id', (req, res) => {
+    const id = req.params.id;
+    Mongo.delete(id)
+      .then(() => res.send({
+        action: 'delete',
+        status: 'ok',
+      }))
+      .catch((err) => {
+        console.log('App::routes::error', err);
+        res.status(500);
+        res.send({
+          action: 'delete',
+          status: 'fail',
+        });
+      });
+  });
 }

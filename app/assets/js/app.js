@@ -1,4 +1,19 @@
 console.log('loaded');
 $('.trash').on('click', function () {
-  console.log('id', $(this).data('id'));
+  if (confirm('Just in case, you will delete this post.\nRemember this is a permanent action.\nDo you want to continue?')) {
+    const $this = $(this);
+    const $parent = $this.parents('.row');
+    const itemId = $this.data('id');
+    $.ajax({
+      url: `/post/${itemId}`,
+      type: 'DELETE',
+    })
+    .done(() => {
+      alert('done!');
+      $parent.remove();
+    })
+    .fail(() => {
+      alert('something goes wrong');
+    });
+  }
 });
